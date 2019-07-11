@@ -59,3 +59,47 @@ $ git log
 ```
 
 ## 3
+Add project and push changes to github
+```
+$ git remote -v # show list of remote repos
+$ git remote add origin https://github.com/matthewosullivan/helloworld.git
+$ git remote -v
+$ git push -u origin master
+$ git status
+$ git add readme.md
+$ git status
+$ git commit -m "Added a readme"
+$ git status
+$ git push
+$ npm init -y # -y default 
+```
+package.json
+```
+{
+  "name": "helloworld",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewosullivan/helloworld.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/matthewosullivan/helloworld/issues"
+  },
+  "homepage": "https://github.com/matthewosullivan/helloworld#readme"
+}
+```
+```
+$ git status
+$ git add package.json
+$ git commit -m "Updated package.json"
+$ git status
+$ git push
+```
