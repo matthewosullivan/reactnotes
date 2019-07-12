@@ -180,3 +180,57 @@ $ git commit -m "Installed webpack"
 $ git status
 $ git push
 ```
+## 5
+Configure webpack
+
+```
+$ cd helloworld
+$ touch webpack.config.js
+```
+webpack.config.js
+```
+const path = require('path')
+
+module.exports = {
+    entry: './src/index.js',
+    output: {
+        path: path.join(__dirname, 'dist'),
+        filename: 'app.bundle.js'
+    }
+}
+```
+```
+$ rm -rf dist
+$ npm run build
+```
+dist/app.bundle.js
+
+##6
+webpack mode setting 
+
+webpack.config.js
+development
+```
+const path = require('path')
+
+module.exports = {
+    mode: 'development',
+    ...
+}
+```
+webpack.config.js
+production
+```
+const path = require('path')
+
+module.exports = {
+    mode: 'production',
+    ...
+}
+```
+Terminal
+```
+npm run build -- --mode development
+npm run build # use configured default of production
+```
+
