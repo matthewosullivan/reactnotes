@@ -103,3 +103,48 @@ $ git commit -m "Updated package.json"
 $ git status
 $ git push
 ```
+## 4
+
+```
+$ cd helloworld
+$ mkdir src
+$ touch index.js
+```
+index.js:
+```
+console.log('Hello world')
+```
+Install webpack and webpack-cli
+```
+$ cd helloworld
+$ npm install --save-dev webpack webpack-cli # --save-dev save as development dependency
+```
+modified package.json file, new package-lock.json file, new node_modules directory 
+
+package.json:
+```
+"devDependencies": {
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.5"
+  }
+```
+node_modules/.bin/webpack and node_modules/.bin/webpack-cli
+
+```
+$ node_modules/.bin/webpack
+```
+webpack creates dist/main.js minified file
+```
+$ node dist/main.js
+```
+
+```
+"scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+```
+
+```
+$ npm run build
+```
