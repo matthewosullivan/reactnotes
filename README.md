@@ -205,7 +205,7 @@ $ npm run build
 ```
 dist/app.bundle.js
 
-##6
+## 6
 webpack mode setting 
 
 webpack.config.js
