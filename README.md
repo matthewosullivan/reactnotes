@@ -108,6 +108,7 @@ $ git push
 ```
 $ cd helloworld
 $ mkdir src
+$ cd src
 $ touch index.js
 ```
 index.js:
