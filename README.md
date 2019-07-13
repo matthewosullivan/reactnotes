@@ -233,4 +233,9 @@ Terminal
 npm run build -- --mode development
 npm run build # use configured default of production
 ```
+## 7
+Babel
 
+```
+$ 
+```
