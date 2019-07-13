@@ -235,8 +235,25 @@ npm run build -- --mode development
 npm run build # use configured default of production
 ```
 ## 7
-Babel
+
+Babel - modern javascript features
+
+Change greet.js:
+```
+const getGreeting = (name) => `Hello ${name}`
+
+export default getGreeting
+```
+Change index.js
+```
+import getGreeting from './greet'
+
+console.log(getGreeting('world'))
+```
 
 ```
-$ 
+$ npm run build
+$ node dist/app.bundle.js
+$ npm i -D 
 ```
+
