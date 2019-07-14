@@ -272,3 +272,36 @@ Babel take modern JavaScript, convert it to Abstract Syntax Tree (AST) and spit 
 
 ## 8
 
+Babel - compile modern JavaScript into JavaScript run in all browsers
+webpack - bundle Javascript
+
+Configure to work together
+```
+$ npm i -D babel-loader
+```
+
+webpack.config.js 
+
+configure loaders to pass source code through before bundled for distribution
+
+configure loader
+
+```
+module: {
+        rules: [
+            {
+                test: /\.js$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/,
+                options: {
+                    presets: ['@babel/preset-env']
+                }
+            }
+        ]
+    }
+```
+
+```
+$ npm run build
+```
+Webpack has used babel-loader to transform our code before creating output bundle
