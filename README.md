@@ -254,6 +254,11 @@ console.log(getGreeting('world'))
 ```
 $ npm run build
 $ node dist/app.bundle.js
-$ npm i -D 
+```
+Need compiler, transform new style JavaScript into JavaScript that will run in older browser - use Babel for this
+-D shorthand for --save-dev
+```
+$ npm i -D @babel/core @babel/cli @babel/preset-env
+$ node_modules/.bin/babel
 ```
 
