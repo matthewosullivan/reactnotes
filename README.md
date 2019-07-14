@@ -255,10 +255,20 @@ console.log(getGreeting('world'))
 $ npm run build
 $ node dist/app.bundle.js
 ```
+Install babel
 Need compiler, transform new style JavaScript into JavaScript that will run in older browser - use Babel for this
 -D shorthand for --save-dev
 ```
 $ npm i -D @babel/core @babel/cli @babel/preset-env
-$ node_modules/.bin/babel
 ```
+Run babel
+```
+$ node_modules/.bin/babel
+$ $(npm bin)/babel ./src/greet.js # does nothing
+$ $(npm bin)/babel ./src/greet.js --presets=@babel/preset-env # converts to javascript that will run in older browers
+```
+
+Babel take modern JavaScript, convert it to Abstract Syntax Tree (AST) and spit out JavaScript that will run in all browsers.
+
+## 8
 
