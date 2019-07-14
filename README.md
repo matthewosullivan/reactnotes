@@ -305,3 +305,19 @@ module: {
 $ npm run build
 ```
 Webpack has used babel-loader to transform our code before creating output bundle
+
+## 9
+
+React application
+
+```
+$ npm i -S react react-dom prop-types
+```
+package.json
+```
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+```
