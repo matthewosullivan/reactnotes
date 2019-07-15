@@ -310,6 +310,8 @@ Webpack has used babel-loader to transform our code before creating output bundl
 
 React application
 
+Install react react-dom prop-types as runtime dependencies
+
 ```
 $ npm i -S react react-dom prop-types
 ```
